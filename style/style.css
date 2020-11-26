@@ -1,0 +1,93 @@
+body{
+    margin: 0px;
+}
+
+.top-part{
+    height: 718px;
+    background: radial-gradient(75.49% 75.49% at 61.01% 75.77%, #376A9A 0%, #2B5276 100%);
+    margin: 0px;
+}
+
+.middle-part{
+    height: 888px;
+    background: white;
+    margin: 0px;
+}
+
+.bottom-part{
+    height: 320px;
+    background: #23415E;
+    margin: 0px;
+}
+
+.top-part__logo>img{
+    height: 16px;
+    width: 120px;
+}
+
+.top-part__logo{
+    width: 170px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.top-part__header{
+    height: 106px;
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 27px;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+
+.top-part__title>p{
+    font-size: 16px;
+    color: #A9C5E0;
+    font-family: 'Roboto', sans-serif;
+    border-left: 1px solid #A9C5E0;
+    padding-left: 30px;
+}
+
+.top-part__tele-number>p{
+    font-size: 16px;
+    color: #A9C5E0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.top-part__tele-number{
+    width: 146px;
+    text-align: left;
+    margin-right: 28px;
+}
+
+.top-part__log-in-button,.top-part__left-side, .top-part__right-side, .top-part__telephone, .top-part__tele-number, .top-part__tele-logo, .top-part__title{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.top-part__tele-logo>img{
+    width: 14px;
+    height: 14px;
+    margin-right: 12px;
+}
+
+.top-part__left-side, .top-part__right-side{
+    width: 100%;
+    margin-right: -100%;
+}
+
+.top-part__right-side{
+    text-align: right;
+}
+
+.top-part__log-in-button>button{
+    width: 170px;
+    height: 52px;
+    background: transparent;
+    border: 2px solid #E5E31F;
+    border-radius: 10px;
+    color: #E5E31F;
+    font: 18px "Roboto";
+    font-style: inherit;
+}
