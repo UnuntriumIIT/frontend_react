@@ -90,4 +90,23 @@ body{
     color: #E5E31F;
     font: 18px "Roboto";
     font-style: inherit;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+
+.top-part__log-in-button>button:focus{
+    outline: none !important;
+}
+
+.top-part__log-in-button>button:hover{
+    background: #E5E31F;
+    color: blue;
+}
+
+.top-part__log-in-button>button:active{
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
 }
