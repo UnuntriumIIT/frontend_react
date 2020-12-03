@@ -32,15 +32,51 @@ body{
 }
 
 .top-part__header{
-    height: 106px;
-    width: 1170px;
+    height: auto;
+    max-width: 1170px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 27px;
     padding-top: 30px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
 }
 
+@media screen and (max-width: 512px){
+    .top-part__header{
+        align-items: center;
+        margin: 0;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-top: 10px;
+    }
+    .top-part__title>p{
+        height: 0px;
+        display: none;
+    }
+    .top-part__telephone, 
+    .top-part__tele-number>p, 
+    .top-part__tele-logo>img{
+        height: 0px;
+        display: none;
+    }
+    .top-part__left-side{
+        height: 20px;
+        width: 120px;
+        margin: auto;
+    }
+    .top-part__right-side{
+        width: 170px;
+        height: 52px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+  }
 .top-part__title>p{
     font-size: 16px;
     color: #A9C5E0;
@@ -61,7 +97,7 @@ body{
     margin-right: 28px;
 }
 
-.top-part__log-in-button,.top-part__left-side, .top-part__right-side, .top-part__telephone, .top-part__tele-number, .top-part__tele-logo, .top-part__title{
+.top-part__log-in-button, .top-part__telephone, .top-part__tele-number, .top-part__tele-logo, .top-part__title{
     display: inline-block;
     vertical-align: middle;
 }
@@ -70,15 +106,6 @@ body{
     width: 14px;
     height: 14px;
     margin-right: 12px;
-}
-
-.top-part__left-side, .top-part__right-side{
-    width: 100%;
-    margin-right: -100%;
-}
-
-.top-part__right-side{
-    text-align: right;
 }
 
 .top-part__log-in-button>button{
