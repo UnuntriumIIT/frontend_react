@@ -11,9 +11,11 @@ body{
 }
 
 .middle-part{
-    height: 888px;
+    max-width: 1170px;
+    height: auto;
     background: white;
-    margin: 0px;
+    margin: 0 auto;
+    padding-bottom: 50px;
 }
 
 .bottom-part{
@@ -271,4 +273,41 @@ body{
     .slider__dots{
         top: 90%;
     }
+}
+
+.middle-part__header{
+    max-width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.middle-part__header>h2{
+    font: 28px sans-serif;
+    color: #2A496B;
+}
+
+.middle__item>h3{
+    font: 20px sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+.middle__item>p{
+    font: 15px sans-serif;
+    color: black;
+}
+
+.middle__item{
+    width: 370px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.middle-part__elements{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
