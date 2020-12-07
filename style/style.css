@@ -12,14 +12,13 @@ body{
 
 .middle-part{
     max-width: 1170px;
-    height: auto;
     background: white;
     margin: 0 auto;
     padding-bottom: 50px;
 }
 
 .bottom-part{
-    height: 320px;
+    height: auto;
     background: #23415E;
     margin: 0px;
 }
@@ -101,7 +100,7 @@ body{
     margin-right: 28px;
 }
 
-.top-part__log-in-button, .top-part__telephone, .top-part__tele-number, .top-part__tele-logo, .top-part__title{
+.inline_block{
     display: inline-block;
     vertical-align: middle;
 }
@@ -273,6 +272,11 @@ body{
     .slider__dots{
         top: 90%;
     }
+
+    .bottom__items{
+        align-items: center;
+        flex-direction: column !important;
+    }
 }
 
 .middle-part__header{
@@ -310,4 +314,54 @@ body{
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.bottom__items{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 90px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bottom-part__logo img{
+    width: 120px;
+    height: 16px;
+}
+
+.bottom-part__menu{
+    width: 370px;
+}
+
+.bottom-part__menu ul{
+    list-style-type: none;
+    -webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
+    padding-left: 0;
+}
+
+.bottom-part__menu ul li{
+    list-style-position: inside;
+    -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+                 break-inside: avoid;
+    padding-bottom: 15px; 
+}
+
+.bottom-part__menu a{
+    font: 15px sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.bottom-part__contacts{
+    width: 175px;
+}
+
+.bottom-part__contacts p{
+    font: 15px sans-serif;
+    color: #A9C5E0;
 }
