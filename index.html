@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf8"/>
         <title>Landing</title>
+        <script src="js/jquery.js"></script>
+        <script src="js/slider.js"></script>
         <link href="style/style.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
@@ -32,9 +34,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="top-part__slider">
-                    <div class="top-part__slide-1"></div>
-                    <div class="top-part__slide-2"></div>
+                <div class="top-part__slider-wrapper">
+                    <div class="top-part__slider-items">
+                        <div class="top-part__item" id="item1">
+                            <div class="item__left">
+                                <h1>Срочная доставка день в день</h1>
+                                <p>Для тех, кто не может ждать у нас есть услуга срочной курьерской доставки корреспондеции и других видов отправлений.</p>
+                                <button><b>Заказать доставку</b></button>
+                            </div>
+                            <div class="item__right">
+                                <img src="pngs/s1.png">
+                            </div>
+                        </div>
+                        <div class="top-part__item" id="item2">
+                            <div class="item__left">
+                                <h1>Подписание договора за 1 час</h1>
+                                <p>В течение часа наш курьер заберет вашу посылку и подпишет с Вами договор о предоставлении услуг.</p>
+                                <button><b>Заказать доставку</b></button>
+                            </div>
+                            <div class="item__right">
+                                <img src="pngs/s2.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__dots">
+                    <div class="dot__left"></div>
+                    <div class="dot__right"></div>
                 </div>
             </div>
 
