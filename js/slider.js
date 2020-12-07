@@ -1,27 +1,18 @@
-var isPaused = false;
 $(document).ready(
     function() {
         $('#item1').show();
         $('#item2').hide();
         $('.dot__right').click(function(){
-            isPaused = true;
-            slideRight();  
-            setTimeout(resume, 5000);
+            slideRight(); 
         });
 
         $('.dot__left').click(function(){ 
-            isPaused = true;
             slideLeft();
-            setTimeout(resume, 5000);
         });
         var f = false;
         setInterval(slide, 5000);
     }
 );
-
-function resume(){
-    isPaused = false;
-}
 
 function slideRight(){
     $('#item1').fadeOut();
@@ -41,15 +32,13 @@ function slideLeft(){
 
 var next = false;
 function slide(){
-    if (isPaused){
-        if (next){
-            slideRight();
-        }
-        else{
-            slideLeft();
-        }
-        next = !next;
+    if (next){
+        slideRight();
     }
+    else{
+        slideLeft();
+    }
+    next = !next;
 }
 
 function sleep(ms) {
