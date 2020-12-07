@@ -6,13 +6,13 @@ $(document).ready(
         $('.dot__right').click(function(){
             isPaused = true;
             slideRight();  
-            setInterval(resume, 5000);
+            setTimeout(resume, 5000);
         });
 
         $('.dot__left').click(function(){ 
             isPaused = true;
             slideLeft();
-            setInterval(resume, 5000);
+            setTimeout(resume, 5000);
         });
         var f = false;
         setInterval(slide, 5000);
