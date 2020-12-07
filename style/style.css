@@ -274,7 +274,8 @@ body{
     }
 
     .bottom__items{
-        align-items: center;
+        padding-left: 10px;
+        align-items: flex-start;
         flex-direction: column !important;
     }
 }
