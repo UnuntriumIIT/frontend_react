@@ -2,6 +2,7 @@ $(document).ready(
     function() {
         $('#item1').show();
         $('#item2').hide();
+        $('dialog').hide();
         $('.dot__right').click(function(){
             slideRight(); 
         });
@@ -11,6 +12,16 @@ $(document).ready(
         });
         var f = false;
         setInterval(slide, 5000);
+
+        $('.top-part__log-in-button').click(function(){
+            $('dialog').fadeIn();
+        });
+        $('.dialog__close-button').click(function(){
+            $('dialog').fadeOut();
+        });
+        $('.dialog__button').click(function(){
+            
+        });
     }
 );
 
