@@ -2,6 +2,7 @@ $(document).ready(
     function() {
         $('#item1').show();
         $('#item2').hide();
+        $('.dia-back').hide();
         $('dialog').hide();
         $('.dot__right').click(function(){
             slideRight(); 
@@ -14,16 +15,37 @@ $(document).ready(
         setInterval(slide, 5000);
 
         $('.top-part__log-in-button').click(function(){
-            $('dialog').fadeIn();
+            OffScroll();
+            $('.dia-back').show();
+            $('.dialog').show();
+        });
+        $(".dia-back").on('click', function (e) {
+            if (e.target == this) closeModal()
         });
         $('.dialog__close-button').click(function(){
-            $('dialog').fadeOut();
+            closeModal()
         });
         $('.dialog__button').click(function(){
-            
+            alert('Congratulations!');
         });
     }
 );
+
+function OffScroll() {
+    var winScrollTop = $(window).scrollTop();
+    $(window).bind('scroll',function () {
+      $(window).scrollTop(winScrollTop);
+    });
+}
+    
+
+function closeModal(){
+    $('.dia-back').fadeOut('fast');
+    $('.dialog').fadeOut('fast');
+    document.getElementById("login").value = "";
+    document.getElementById("pswd").value = "";
+    $(window).unbind('scroll');
+}
 
 function slideRight(){
     $('#item1').fadeOut();
