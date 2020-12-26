@@ -11,7 +11,6 @@ $(document).ready(
         $('.dot__left').click(function(){ 
             slideLeft();
         });
-        var f = false;
         setInterval(slide, 5000);
 
         $('.top-part__log-in-button').click(function(){
@@ -26,10 +25,47 @@ $(document).ready(
             closeModal()
         });
         $('.dialog__button').click(function(){
-            alert('Congratulations!');
+            let isValidMail = checkEmail();
+            if (isValidMail) {
+                let isValidPswd = checkPswd();
+                if (isValidPswd){
+                    window.location.href = 'admin.html';
+                }
+            }
+            
         });
     }
 );
+
+function checkPswd(){
+    if (document.getElementById("pswd").value.length > 5){
+        return true;
+    }
+    else {
+        alert('Слишком короткий пароль!!!');
+        return false;
+    }
+}
+
+function checkEmail(){
+    if (document.getElementById("inputMail").value.length > 4){
+        let email = $('#inputMail[type=email]').val();
+        
+        if (email.length > 0
+        && (email.match(/.+?\@.+/g) || []).length !== 1) {
+            console.log('invalid');
+            alert('Вы ввели некорректный e-mail!');
+            return false;
+        } else {
+            console.log('valid');
+            return true;
+        }
+    }
+    else {
+        alert('Некорректные данные авторизации!!!');
+        return false;
+    }
+}
 
 function OffScroll() {
     var winScrollTop = $(window).scrollTop();
