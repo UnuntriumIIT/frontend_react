@@ -1,18 +1,7 @@
-$(document).ready(
-    function() {
-        $('#item1').show();
-        $('#item2').hide();
+jQuery(document).ready(function ($) {
         $('.dia-back').hide();
         $('dialog').hide();
-        $('.dot__right').click(function(){
-            slideRight(); 
-        });
-
-        $('.dot__left').click(function(){ 
-            slideLeft();
-        });
-        setInterval(slide, 5000);
-
+        document.getElementById('item2').style.visibility='hidden';
         $('.top-part__log-in-button').click(function(){
             OffScroll();
             $('.dia-back').show();
@@ -32,8 +21,45 @@ $(document).ready(
                     window.location.href = 'admin.html';
                 }
             }
-            
         });
+
+        var slides = $("#slider #slides").children(".top-part__item");
+        var width = $("#slider #slides").width();
+        var i = slides.length;
+        var offset = i * width + 50;
+        i--;
+
+        $("#slider #slides").css('width',offset);
+        
+        offset = 0;
+        $(".dot__right").click(function(){
+            document.getElementById('item1').style.visibility='hidden';
+            document.getElementById('item2').style.visibility='visible';
+            if (offset < width * i) {
+                offset += width;
+                $(".top-part__item").css("transform","translate3d(-"+offset+"px, 0px, 0px)");
+                document.getElementsByClassName('dot__left')[0].style.background='#264160';
+                document.getElementsByClassName('dot__right')[0].style.background='#346491';
+            }
+        });
+
+        $(".dot__left").click(function(){
+            document.getElementById('item2').style.visibility='hidden';
+            document.getElementById('item1').style.visibility='visible';
+            if (offset > 0) {
+                offset -= width;
+                $(".top-part__item").css("transform","translate3d(-"+offset+"px, 0px, 0px)");
+                document.getElementsByClassName('dot__left')[0].style.background='#346491';
+                document.getElementsByClassName('dot__right')[0].style.background='#264160';
+            }
+        });
+
+        function test(){
+            offset = 0;
+            if (document.getElementById('item2').style.visibility == 'visible'){
+                
+            }
+        }
     }
 );
 
@@ -81,36 +107,4 @@ function closeModal(){
     $('#inputMail').val('');
     $('#pswd').val('');
     $(window).unbind('scroll');
-}
-
-function slideRight(){
-    $('#item1').fadeOut();
-    sleep(500);
-    $('#item2').fadeIn();
-    document.getElementsByClassName('dot__left')[0].style.background='#264160';
-    document.getElementsByClassName('dot__right')[0].style.background='#346491';
-}
-
-function slideLeft(){
-    $('#item2').fadeOut();
-    sleep(500);
-    $('#item1').fadeIn();
-    document.getElementsByClassName('dot__left')[0].style.background='#346491';
-    document.getElementsByClassName('dot__right')[0].style.background='#264160';
-}
-
-var next = false;
-function slide(){
-    if (next){
-        slideRight();
-    }
-    else{
-        slideLeft();
-    }
-    next = !next;
-}
-
-function sleep(ms) {
-    ms += new Date().getTime();
-    while (new Date() < ms){}
 } 
