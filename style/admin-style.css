@@ -318,7 +318,7 @@ body{
     border-radius: 6px;
     border-color: #23415E;
     margin-top: 74px;
-    margin-bottom: 30px;
+    margin-bottom: 0px
 }
 
 .middle-part__button button{
@@ -365,4 +365,16 @@ body{
 .middle-part__image{
     display: flex;
     flex-direction: row;
+}
+
+.main__countChars{
+    color: #D0C9D6;
+    font-size: 12px;
+    line-height: 20px;
+    width: 770px;
+    text-align: right;
+    margin-bottom: 12px;
+    font-family: sans-serif;
+    margin: 0;
+    margin-bottom: 30px
 }

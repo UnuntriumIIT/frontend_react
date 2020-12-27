@@ -23,8 +23,40 @@ $(document).ready(
             }
             
         });
-    }
-);
+
+        
+        var text_max = 151;
+        var text_length = 0
+        $('#counter').html('Символов: ' + text_length + '/' + text_max);
+        $('#txarea').keyup(function() {
+            text_length = $('#txarea').val().length;
+            $('#counter').html('Символов: ' + text_length + '/' + (text_max-1));
+            if (text_length >= text_max){
+                $('#counter').css({
+                    "color" : "red"
+
+                });
+                $('.middle-part__submit').disabled = false ;
+            }
+            else {
+                $('#counter').css({
+                    "color" : "#D0C9D6"
+                });
+                $('.middle-part__submit').disabled = true ;
+            }
+        });
+
+        $(".middle-part__submit").click(function (){
+            text_length = $('#txarea').val().length;
+            if (text_length < text_max && text_length > 0){
+                alert('успех')
+            }
+            else {
+                alert('ошибка')
+            }
+        });
+        }
+    );
 
 function checkPswd(){
     if (document.getElementById("pswd").value.length > 5){
@@ -71,3 +103,4 @@ function closeModal(){
     $('#pswd').val('');
     $(window).unbind('scroll');
 }
+
