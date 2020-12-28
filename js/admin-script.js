@@ -23,7 +23,6 @@ $(document).ready(
             }
             
         });
-
         
         var text_max = 151;
         var text_length = 0
@@ -54,9 +53,47 @@ $(document).ready(
             else {
                 alert('ошибка')
             }
+            
+        });
+
+        $('#delete').click(function(){
+            $('#img_two').css('display', 'none');
+            $('#delete').css('display', 'none');
+            $('#kek').text('');
+            $('input[type=file]').val('');
         });
         }
     );
+
+function onFileSelected(event){
+    var selectedFile = event.target.files[0];
+    var reader = new FileReader();
+    var imgtag = document.getElementById("img_two");
+    reader.onload = function(event) {
+        var image = new Image();
+        image.src = reader.result;
+        image.onload = function() {
+            var width = image.width;
+            var height = image.height;
+            console.log(width + " " + height);
+            if(width == 270 && height == 270){
+                imgtag.src = event.target.result;
+                $('#kek').css('color', 'black');
+                $('#kek').text($('input[type=file]').val().split('\\').pop());
+                $('#img_two').css('height', '34px');
+                $('#img_two').css('width', '34px');
+                $('#img_two').css('display', 'flex');
+                $('#delete').css('display', 'flex');
+            }
+            else{
+                $('#kek').text('Неверный формат изображения!!1!!!');
+                $('#kek').css('color', 'red');
+            }
+        };
+    };
+
+    reader.readAsDataURL(selectedFile);
+}
 
 function checkPswd(){
     if (document.getElementById("pswd").value.length > 5){

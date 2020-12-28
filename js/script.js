@@ -1,7 +1,6 @@
 jQuery(document).ready(function ($) {
         $('.dia-back').hide();
         $('dialog').hide();
-        document.getElementById('item2').style.visibility='hidden';
         $('.top-part__log-in-button').click(function(){
             OffScroll();
             $('.dia-back').show();
@@ -22,44 +21,6 @@ jQuery(document).ready(function ($) {
                 }
             }
         });
-
-        var slides = $("#slider #slides").children(".top-part__item");
-        var width = $("#slider #slides").width();
-        var i = slides.length;
-        var offset = i * width + 50;
-        i--;
-
-        $("#slider #slides").css('width',offset);
-        
-        offset = 0;
-        $(".dot__right").click(function(){
-            document.getElementById('item1').style.visibility='hidden';
-            document.getElementById('item2').style.visibility='visible';
-            if (offset < width * i) {
-                offset += width;
-                $(".top-part__item").css("transform","translate3d(-"+offset+"px, 0px, 0px)");
-                document.getElementsByClassName('dot__left')[0].style.background='#264160';
-                document.getElementsByClassName('dot__right')[0].style.background='#346491';
-            }
-        });
-
-        $(".dot__left").click(function(){
-            document.getElementById('item2').style.visibility='hidden';
-            document.getElementById('item1').style.visibility='visible';
-            if (offset > 0) {
-                offset -= width;
-                $(".top-part__item").css("transform","translate3d(-"+offset+"px, 0px, 0px)");
-                document.getElementsByClassName('dot__left')[0].style.background='#346491';
-                document.getElementsByClassName('dot__right')[0].style.background='#264160';
-            }
-        });
-
-        function test(){
-            offset = 0;
-            if (document.getElementById('item2').style.visibility == 'visible'){
-                
-            }
-        }
     }
 );
 

@@ -53,35 +53,46 @@
                     </div>
                 </div>
             </div>
-            <div class="top-part__slider">
-            <div class="top-part__slider-wrapper" id="slider">
-                <div class="top-part__slider-items" id="slides">
-                    <div class="top-part__item" id="item1">
-                        <div class="item__left">
-                            <h1>Срочная доставка день в день</h1>
-                            <p>Для тех, кто не может ждать у нас есть услуга срочной курьерской доставки корреспондеции и других видов отправлений.</p>
-                            <button><b>Заказать доставку</b></button>
-                        </div>
-                        <div class="item__right">
-                            <img src="pngs/s1.png">
+            
+            <div class="slider">
+                <div class="slider__wrapper">
+                    <div class="slider__item">
+                        <div class="text-img">
+                            <div class="text">
+                                <div class="text-top">Срочная доставка день в день</div>
+                                <div class="text-center">Для тех, кто не может ждать у нас есть услуга срочной курьерской доставки корреспондеции и других видов отправлений.</div>
+                                <div class="text-button">
+                                    <div class="text-button__text"><a href="#" class="text-button__button"><b>Заказать доставку</b></a></div>
+                                </div>
+                            </div>
+                            <div class="img">
+                                <div class="img__container" id="img1"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="top-part__item" id="item2">
-                        <div class="item__left">
-                            <h1>Подписание договора за 1 час</h1>
-                            <p>В течение часа наш курьер заберет вашу посылку и подпишет с Вами договор о предоставлении услуг.</p>
-                            <button><b>Заказать доставку</b></button>
-                        </div>
-                        <div class="item__right">
-                            <img src="pngs/s2.png">
+    
+                    <div class="slider__item">
+                        <div class="text-img">
+                            <div class="text">
+                                <div class="text-top">Подписание договора за 1 час</div>
+                                <div class="text-center">В течение часа наш курьер заберёт вашу посылку и подпишет с Вами договор о предоставлении услуг.</div>
+                                <div class="text-button">
+                                    <div class="text-button__text"><a href="#" class="text-button__button"><b>Заказать доставку</b></a></div>
+                                </div>
+                            </div>
+                            <div class="img">
+                                <div class="img__container" id="img2"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            </div>
-            <div class="slider__dots">
-                <div class="dot__left"></div>
-                <div class="dot__right"></div>
+                <div class="navigation">
+                    <div class="block"></div>
+                    <label for="r1" class="bar slider__control slider__control_left" role="button"></label>
+                    <label for="r2" class="bar slider__control slider__control_right slider__control_show" role="button"></label>
+                </div>
+    <!--            <a class="slider__control slider__control_left" href="#" role="button"></a>-->
+    <!--            <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>-->
             </div>
         </div>
         <div class="middle-part">
@@ -139,6 +150,7 @@
                 </div>
             </div>
         </div>
+        <script src="js/slider.js"></script>
     </body>
 </html>
     
